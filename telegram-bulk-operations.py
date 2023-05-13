@@ -8,7 +8,7 @@ client = TelegramClient('test_session', API_ID, API_HASH)
 client.start()
 
 def bulk_download():
-    for message in client.iter_messages('some_username', limit=10000):
+    for message in client.iter_messages('target_username', limit=10000):
         print(message.download_media())
 
 def list_groups():
